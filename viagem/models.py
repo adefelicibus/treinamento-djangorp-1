@@ -4,8 +4,8 @@ from ibge.models import Municipio
 
 
 class Itinerario(models.Model):
-    origem = models.ForeignKey(Municipio)
-    destino = models.ForeignKey(Municipio)
+    origem = models.ForeignKey(Municipio, related_name='origens')
+    destino = models.ForeignKey(Municipio, related_name='destinos')
     duracao = models.TimeField()
 
 class Empresa(models.Model):
