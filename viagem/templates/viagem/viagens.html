@@ -1,0 +1,15 @@
+{% extends 'website/base.html' %}
+{% block body %}
+<ul>
+    {% for viagem in viagens %}
+    <li>
+        <span>{{ viagem.tipo_do_dia }}</span>
+        <span>{{ viagem.empresa.nome }}</span>
+        <span>{{ viagem.itinerario.origem }}</span>
+        <span>{{ viagem.itinerario.destino }}</span>
+        <span>{{ viagem.itinerario.duracao }}</span>
+        <span>{{ viagem.saida }}</span>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

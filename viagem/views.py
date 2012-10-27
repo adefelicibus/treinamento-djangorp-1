@@ -1,10 +1,9 @@
 
-from django.http import HttpResponse
+from django.shortcuts import render
 from viagem.models import Viagem
 
 def lista_viagens(request):
 
-    buggy_str = ''
-    for viagem in Viagem.objects.all():
-        buggy_str += unicode(viagem) + '<br>'
-    return HttpResponse(unicode(buggy_str))
+    return render(request, 'viagens.html', {
+        'viagens': Viagem.objects.all()
+    })

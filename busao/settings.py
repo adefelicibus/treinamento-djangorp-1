@@ -1,5 +1,10 @@
 # Django settings for busao project.
 
+import os
+
+#CWD = os.path.abspath(os.path.dirname(__file__))
+#GLOBAL_TEMPLATE_DIR = os.path.join(CWD, '../templates/')
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -104,6 +109,7 @@ ROOT_URLCONF = 'busao.urls'
 WSGI_APPLICATION = 'busao.wsgi.application'
 
 TEMPLATE_DIRS = (
+#    GLOBAL_TEMPLATE_DIR,
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -124,6 +130,7 @@ INSTALLED_APPS = (
     'south',
     'ibge',
     'viagem',
+    'website',
 )
 
 # A sample logging configuration. The only tangible logging
