@@ -5,3 +5,4 @@ django-ibge
 distribute>=0.6.30
 mysql-python
 south
+gunicorn

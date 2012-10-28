@@ -5,7 +5,7 @@ import os
 PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
 #GLOBAL_TEMPLATE_DIR = os.path.join(CWD, '../templates/')
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
