@@ -17,5 +17,5 @@ urlpatterns = patterns('viagem.views',
     url('^empresa/id/(?P<pk>[\w_-]+)/?$',
         EmpresaDetailById.as_view(), name='empresa-by-id'),
     url('^empresa/(?P<slug>[\w_-]+)/?$',
-        DetailView.as_view(model=Empresa), name='empresa-by-id'),
+        DetailView.as_view(model=Empresa), name='empresa'),
 )
