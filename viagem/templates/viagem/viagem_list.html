@@ -1,7 +1,7 @@
 {% extends 'website/base.html' %}
 {% block body %}
 <ul>
-    {% for viagem in viagens %}
+    {% for viagem in object_list %}
     <li>
         <span>{{ viagem.tipo_do_dia }}</span>
         <span>{{ viagem.empresa.nome }}</span>
