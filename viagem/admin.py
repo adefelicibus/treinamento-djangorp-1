@@ -16,6 +16,9 @@ class EmpresasOrigemUFFilter(SimpleListFilter):
                      for uf in UnidadeFederativa.objects.all())
 
     def queryset(self, request, queryset):
+        if not self.value():
+            return Empresa.objects.all()
+
         return Empresa.objects.filter(
             viagem__itinerario__origem__uf__codigo_ibge=self.value()
         ).distinct()
