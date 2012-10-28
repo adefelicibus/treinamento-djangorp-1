@@ -30,6 +30,7 @@ class Empresa(models.Model):
                                 blank=True)
     email = models.EmailField(null=True, blank=True)
     site = models.URLField(null=True, blank=True)
+    slug = models.SlugField()
 
     def __unicode__(self):
         return self.nome
