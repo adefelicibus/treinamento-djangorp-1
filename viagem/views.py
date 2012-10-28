@@ -4,6 +4,6 @@ from viagem.models import Viagem
 
 def lista_viagens(request):
 
-    return render(request, 'viagens.html', {
+    return render(request, 'viagem/viagens.html', {
         'viagens': Viagem.objects.all()
     })
