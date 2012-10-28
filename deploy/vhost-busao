@@ -1,0 +1,22 @@
+upstream busao {
+    server 127.0.0.1:8000;
+}
+
+server {
+	root /usr/share/nginx/www;
+	index index.html index.htm;
+
+	server_name localhost www.saolento.com.br saolento.com.br;
+
+	location / {
+        proxy_pass http://busao;
+	}
+
+    location /static/ {
+        root /home/python/src/busao/static/;
+    }
+
+    location /media/ {
+        root /home/python/src/busao/media/;
+    }
+}
