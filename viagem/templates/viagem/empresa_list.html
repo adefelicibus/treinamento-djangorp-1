@@ -1,0 +1,9 @@
+{% extends "website/base.html" %}
+
+{% block body %}
+<ul>
+    {% for empresa in object_list %}
+        <li><a href="{% url empresa empresa.slug %}">{{ empresa.nome }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

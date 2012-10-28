@@ -12,6 +12,8 @@ urlpatterns = patterns('viagem.views',
     url(r'^$', ListView.as_view(model=Viagem), name='viagens'),
     url(r'^privado$', login_required(ListaViagens.as_view()),
         name='viagens'),
+    url('^empresa/?$',
+        ListView.as_view(model=Empresa), name='empresas'),
     url('^empresa/(?P<slug>[\w_-]+)/?$',
         DetailView.as_view(model=Empresa), name='empresa'),
 )
