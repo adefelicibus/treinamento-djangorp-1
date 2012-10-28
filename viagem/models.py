@@ -25,7 +25,9 @@ class Itinerario(models.Model):
 
 
 class Empresa(models.Model):
-    nome = models.CharField(max_length=100)
+    nome = models.CharField(max_length=100,
+                            verbose_name=u"Nome da Empresa",
+                            help_text=u'Aqui você tem que colocar o nome da empresa')
     telefone = models.CharField(max_length=20, null=True,
                                 blank=True)
     email = models.EmailField(null=True, blank=True)
