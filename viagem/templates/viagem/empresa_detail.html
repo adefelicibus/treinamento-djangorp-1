@@ -1,0 +1,18 @@
+{% extends "website/base.html" %}
+
+{% block body %}
+<div>
+    <b>Nome: </b><span>{{ object.nome }}</span>
+</div>
+<div>
+    <b>Telefone: </b><span>{{ object.telefone }}</span>
+</div>
+<div>
+    <b>Email: </b>
+    <a href="mailto:{{ object.email }}">{{ object.email }}</a>
+</div>
+<div>
+    <b>Site: </b>
+    <a href="{{ object.site }}">{{ object.site }}</a>
+</div>
+{% endblock %}
